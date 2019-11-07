@@ -22,6 +22,7 @@ class Expenses: ObservableObject{
 
 struct ContentView: View {
     @ObservedObject private var expenses = Expenses()
+    @State var showingAddExpense = false
     var body: some View {
         NavigationView{
             VStack{
@@ -37,11 +38,14 @@ struct ContentView: View {
                     Image(systemName: "plus")
                 }
             )
+                .sheet(isPresented: $showingAddExpense) {
+                    AddView(expenses: self.expenses)
+            }
         }
     }
     
     func addExpense(){
-        expenses.items.append(Expense(name: "test", type: "Business", amount: 1000))
+        showingAddExpense = true
     }
     
     func deleteExpense(offset: IndexSet){
