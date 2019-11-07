@@ -9,7 +9,8 @@
 import SwiftUI
 
 //structure to store info of or expense
-struct Expense {
+struct Expense: Identifiable {
+    let id = UUID()
     let name: String
     let type: String
     let amount: Int
@@ -25,11 +26,12 @@ struct ContentView: View {
         NavigationView{
             VStack{
                 List{
-                    ForEach(expenses.items, id: \.name){
+                    ForEach(expenses.items){
                         Text($0.name)
                     }.onDelete(perform: deleteExpense)
                 }
             }
+            .navigationBarTitle("iExpense")
             .navigationBarItems(trailing:
                 Button(action: addExpense){
                     Image(systemName: "plus")
