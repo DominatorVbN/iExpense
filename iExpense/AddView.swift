@@ -29,7 +29,18 @@ struct AddView: View {
                 
                 TextField("Amount", text: $amount)
                     .keyboardType(.numberPad)
-            }.navigationBarTitle("Add Expense")
+            }
+            .navigationBarTitle("Add Expense")
+            .navigationBarItems(trailing:
+                Button(action: {
+                    if let actualAmount = Int(self.amount){
+                        let expense = Expense(name: self.name, type: self.type, amount: actualAmount)
+                        self.expenses.items.append(expense)
+                    }
+                }){
+                    Text("Save")
+                }
+            )
         }
     }
 }

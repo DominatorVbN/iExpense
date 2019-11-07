@@ -8,21 +8,12 @@
 
 import SwiftUI
 
-//structure to store info of or expense
-struct Expense: Identifiable {
-    let id = UUID()
-    let name: String
-    let type: String
-    let amount: Int
-}
 
-class Expenses: ObservableObject{
-    @Published var items = [Expense]()
-}
 
 struct ContentView: View {
     @ObservedObject private var expenses = Expenses()
     @State var showingAddExpense = false
+
     var body: some View {
         NavigationView{
             VStack{
