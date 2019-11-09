@@ -1,6 +1,6 @@
 #  iExpense
 
-##An money management iOS app made following [#100DaysOfSwiftUI]("https://www.hackingwithswift.com/100/swiftui") by Paul Hudson
+## An money management iOS app made following [#100DaysOfSwiftUI]("https://www.hackingwithswift.com/100/swiftui") by Paul Hudson
 
 ## Light Mode
 <p align="center">
