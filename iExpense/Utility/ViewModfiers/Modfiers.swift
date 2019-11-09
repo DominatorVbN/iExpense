@@ -16,6 +16,7 @@ struct BackgroundModifier: ViewModifier {
                 RoundedRectangle(cornerRadius: 15)
                     .fill(Color(UIColor.systemGroupedBackground))
         )
+            .shadow(color: Color.secondary, radius: 2)
         
     }
 }

@@ -41,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		8321B378237709B600D726B4 /* ExpenseEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseEmptyView.swift; sourceTree = "<group>"; };
+		8321B37A237714C200D726B4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		837E30182377022D0090038E /* ExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseView.swift; sourceTree = "<group>"; };
 		837E301C2377032E0090038E /* Modfiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modfiers.swift; sourceTree = "<group>"; };
 		838695C4237485410057211C /* iExpense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iExpense.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +134,7 @@
 		838695BB237485400057211C = {
 			isa = PBXGroup;
 			children = (
+				8321B37A237714C200D726B4 /* README.md */,
 				838695C6237485410057211C /* iExpense */,
 				838695DD237485460057211C /* iExpenseTests */,
 				838695E8237485460057211C /* iExpenseUITests */,
