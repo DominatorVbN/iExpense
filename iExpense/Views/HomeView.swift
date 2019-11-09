@@ -8,19 +8,23 @@
 
 import SwiftUI
 
-
-
-struct ContentView: View {
+struct HomeView: View {
     @ObservedObject private var expenses = Expenses()
     @State var showingAddExpense = false
-
+    var shouldShowEmptyState: Bool{
+        return expenses.items.count == 0
+    }
     var body: some View {
         NavigationView{
             VStack{
-                List{
-                    ForEach(expenses.items){
-                        Text($0.name)
-                    }.onDelete(perform: deleteExpense)
+                if shouldShowEmptyState{
+                    ExpenseEmptyView(addExpense: $showingAddExpense)
+                }else{
+                    List{
+                        ForEach(expenses.items){ item in
+                            ExpenseView(item: item)
+                        }.onDelete(perform: deleteExpense)
+                    }
                 }
             }
             .navigationBarTitle("iExpense")
@@ -46,6 +50,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
     }
 }

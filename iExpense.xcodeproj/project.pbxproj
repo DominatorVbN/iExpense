@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8321B379237709B600D726B4 /* ExpenseEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321B378237709B600D726B4 /* ExpenseEmptyView.swift */; };
+		837E30192377022D0090038E /* ExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837E30182377022D0090038E /* ExpenseView.swift */; };
+		837E301D2377032E0090038E /* Modfiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837E301C2377032E0090038E /* Modfiers.swift */; };
 		838695C8237485410057211C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838695C7237485410057211C /* AppDelegate.swift */; };
 		838695CA237485410057211C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838695C9237485410057211C /* SceneDelegate.swift */; };
-		838695CC237485410057211C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838695CB237485410057211C /* ContentView.swift */; };
+		838695CC237485410057211C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838695CB237485410057211C /* HomeView.swift */; };
 		838695CE237485450057211C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 838695CD237485450057211C /* Assets.xcassets */; };
 		838695D1237485450057211C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 838695D0237485450057211C /* Preview Assets.xcassets */; };
 		838695D4237485450057211C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838695D2237485450057211C /* LaunchScreen.storyboard */; };
@@ -37,10 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8321B378237709B600D726B4 /* ExpenseEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseEmptyView.swift; sourceTree = "<group>"; };
+		837E30182377022D0090038E /* ExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseView.swift; sourceTree = "<group>"; };
+		837E301C2377032E0090038E /* Modfiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modfiers.swift; sourceTree = "<group>"; };
 		838695C4237485410057211C /* iExpense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iExpense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		838695C7237485410057211C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		838695C9237485410057211C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		838695CB237485410057211C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		838695CB237485410057211C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		838695CD237485450057211C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		838695D0237485450057211C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		838695D3237485450057211C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,6 +86,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		837E30152377017C0090038E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				838695CB237485410057211C /* HomeView.swift */,
+				838695F723749BC90057211C /* AddView.swift */,
+				837E30182377022D0090038E /* ExpenseView.swift */,
+				8321B378237709B600D726B4 /* ExpenseEmptyView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		837E3016237701960090038E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				838695F92374A5060057211C /* Expenses.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		837E3017237701A90090038E /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				838695C7237485410057211C /* AppDelegate.swift */,
+				838695C9237485410057211C /* SceneDelegate.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		837E301A237702B80090038E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				837E301B237702CB0090038E /* ViewModfiers */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		837E301B237702CB0090038E /* ViewModfiers */ = {
+			isa = PBXGroup;
+			children = (
+				837E301C2377032E0090038E /* Modfiers.swift */,
+			);
+			path = ViewModfiers;
+			sourceTree = "<group>";
+		};
 		838695BB237485400057211C = {
 			isa = PBXGroup;
 			children = (
@@ -103,15 +153,14 @@
 		838695C6237485410057211C /* iExpense */ = {
 			isa = PBXGroup;
 			children = (
-				838695C7237485410057211C /* AppDelegate.swift */,
-				838695C9237485410057211C /* SceneDelegate.swift */,
-				838695CB237485410057211C /* ContentView.swift */,
+				837E301A237702B80090038E /* Utility */,
+				837E3017237701A90090038E /* Supporting */,
+				837E3016237701960090038E /* Model */,
+				837E30152377017C0090038E /* Views */,
 				838695CD237485450057211C /* Assets.xcassets */,
 				838695D2237485450057211C /* LaunchScreen.storyboard */,
 				838695D5237485450057211C /* Info.plist */,
 				838695CF237485450057211C /* Preview Content */,
-				838695F723749BC90057211C /* AddView.swift */,
-				838695F92374A5060057211C /* Expenses.swift */,
 			);
 			path = iExpense;
 			sourceTree = "<group>";
@@ -276,8 +325,11 @@
 				838695FA2374A5060057211C /* Expenses.swift in Sources */,
 				838695F823749BC90057211C /* AddView.swift in Sources */,
 				838695C8237485410057211C /* AppDelegate.swift in Sources */,
+				8321B379237709B600D726B4 /* ExpenseEmptyView.swift in Sources */,
 				838695CA237485410057211C /* SceneDelegate.swift in Sources */,
-				838695CC237485410057211C /* ContentView.swift in Sources */,
+				838695CC237485410057211C /* HomeView.swift in Sources */,
+				837E301D2377032E0090038E /* Modfiers.swift in Sources */,
+				837E30192377022D0090038E /* ExpenseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
