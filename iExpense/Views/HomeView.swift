@@ -33,7 +33,9 @@ struct HomeView: View {
                     Image(systemName: "plus")
                 }
             )
-                .sheet(isPresented: $showingAddExpense) {
+            //here i want to add edit button
+            .navigationBarItems(leading: EditButton())
+            .sheet(isPresented: $showingAddExpense) {
                     AddView(expenses: self.expenses)
             }
         }
