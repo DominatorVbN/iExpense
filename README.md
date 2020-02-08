@@ -2,6 +2,12 @@
 
 ## An money management iOS app made following [#100DaysOfSwiftUI]("https://www.hackingwithswift.com/100/swiftui") by Paul Hudson
 
+# What i learned
+1.  Implementing custom classes conforms to ObservableObject
+2. Sheet Modifier
+3. Forms in SwiftUI
+4. Persisting custom classes to UserDefaults
+
 ## Light Mode
 <p align="center">
 	<img src="https://github.com/DominatorVbN/iExpense/blob/master/README%20ASSETS/iExpense-home-light.png?raw=true" alt="Word Scramble Screenshot" width="160">
